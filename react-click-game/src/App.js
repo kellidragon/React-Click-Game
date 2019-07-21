@@ -18,7 +18,7 @@ class App extends Component {
 
   shuffleCards = id => {
 
-    let isClicked = this.state.clickedArtIds;
+    let isClicked = this.state.isClicked;
 
     if (isClicked.includes(id)) {
       this.setState({
@@ -33,26 +33,28 @@ class App extends Component {
 
 
       if (isClicked.length === 8) {
-        this.setState({ 
-          score: 8, 
-          status: "You Won! Click to play again", 
-          isClicked: [] 
-      });
+        this.setState({
+          score: 8,
+          status: "You Won! Click to play again",
+          isClicked: []
+        });
         return;
       }
 
-      if (this.state.score > this.state.highscore) {
+      this.setState({
+        art,
+        isClicked,
+        score: isClicked.length,
+        status: " "
+      });
+
+      //high score
+      if (isClicked > this.state.highscore) {
         this.setState({
           highscore: this.state.score
         });
         return;
       }
-
-      this.setState({ 
-        art, 
-        isClicked, 
-        score: isClicked.length, 
-        status: " " });
 
       for (let i = art.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -62,7 +64,7 @@ class App extends Component {
   }
 
 
-    
+
 
 
   // Map over this.state.art and render a Card component for each art object
@@ -71,13 +73,13 @@ class App extends Component {
       <Wrapper>
         <Jumbotron> </Jumbotron>
         <Score total={this.state.score}
-               goal={8}
-               highscore={this.state.highScore}
-               status={this.state.status}
-               />
+          goal={8}
+          highscore={this.state.highScore}
+          status={this.state.status}
+        />
         {this.state.art.map(art => (
           <Card
-            shuffleCards ={this.shuffleCards}
+            shuffleCards={this.shuffleCards}
             id={art.id}
             key={art.id}
             image={art.image}
