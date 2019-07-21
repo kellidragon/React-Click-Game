@@ -48,22 +48,24 @@ class App extends Component {
         status: " "
       });
 
-      //high score
-      if (isClicked > this.state.highscore) {
-        this.setState({
-          highscore: this.state.score
-        });
-        return;
-      }
-
+      
+    
       for (let i = art.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [art[i], art[j]] = [art[j], art[i]];
       }
+      
     }
   }
 
-
+  // set the high score
+  setHighScore = () => {
+    if (this.state.score > this.state.highscore) {
+      this.setState({
+        highscore: this.state.score
+      });
+    }
+  };
 
 
 
@@ -71,7 +73,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Jumbotron> </Jumbotron>
+        <Jumbotron/>
         <Score total={this.state.score}
           goal={8}
           highscore={this.state.highScore}
