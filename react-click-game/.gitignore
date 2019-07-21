@@ -17,7 +17,6 @@
 .env.development.local
 .env.test.local
 .env.production.local
-.fs-extra
 
 npm-debug.log*
 yarn-debug.log*
