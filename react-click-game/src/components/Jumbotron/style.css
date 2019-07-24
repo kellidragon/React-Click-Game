@@ -1,9 +1,11 @@
-.headerImg{
+.backgroundImage{
   width: 100%;
-  background-image: url(/public/images/paint.png) no-repeat center center;
+  color: white;
+  background-image: url('https://png2.kisspng.com/sh/46c0c571aeb6d47af7b16fad22c9fc4f/L0KzQYm3U8I5N5l1fZH0aYP2gLBuTfJzfaRtReZAcoH4f7r6hb1kd510ip99ZXHvPcHoif51NZN3jeVxLYP3grFyhb02aZNnfNM7YkO1c7TqV742PmU7TacCMUG4QoO5VsA2OmQ3SKo6LoDxd1==/kisspng-brush-turquoise-color-teal-paint-brush-stroke-5abbda2b32ccc7.5646557115222605232081.png');
+  background-color: rgba(255, 255, 255, 0);
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
-  background-color: white;
 }
+
