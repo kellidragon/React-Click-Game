@@ -7,4 +7,4 @@
 
 
 
-![header](https://github.com/kellidragon/React-Click-Game/public/images/react.png)
+![header](https://github.com/kellidragon/React-Click-Game/react-click-game/public/images/react.png)
