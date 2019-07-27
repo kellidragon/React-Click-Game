@@ -17,4 +17,4 @@ A memory game with React. This app uses art pieces that shuffle upon each click.
 
 
 
-![react](https://github.com/kellidragon/React-Click-Game/public/images/react.png)
+![react](https://github.com/kellidragon/React-Click-Game/react-click-game/public/images/react.png)
