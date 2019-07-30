@@ -2,10 +2,11 @@
   padding-top: 100px;
   display: flex;
   flex-flow: row wrap;
-  padding: 100px;
-  justify-content: space-around;
+  padding-left: 140px;
+  padding-right: 140px;
+  justify-content: center;
   align-content: flex-start;
   overflow: auto;
-  margin: 0 200px ;
+  margin: 0 100px ;
 }
 
